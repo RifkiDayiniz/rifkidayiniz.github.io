@@ -8,8 +8,10 @@
     </head>
 
     <body>
-      <p>buraya nasıl geldiğini bilmiyorum, ama 5 saniye sonra ana sayfaya yönlendirileceksin.</p>
+      <p id="404"></p>
       <script>
+          var silgi = window.location.pathname.replace("/", "")
+          document.getElementById("404").innerHTML=silgi
           setTimeout(function() {
             window.location.assign("https://ismailuygar.tk")
           }, 5000)
