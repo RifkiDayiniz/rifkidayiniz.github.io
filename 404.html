@@ -8,11 +8,23 @@
     </head>
 
     <body>
-      <p id="404">javascript'i aç.</p>
+      <p id="js">javascript'i aç.</p>
+        <p id="yazi"></p>
       <script>
           var silgi = window.location.pathname.replace("/", "")
-          document.getElementById("404").innerHTML=silgi
           document.getElementById("titil").innerHTML=silgi
+          document.getElementById("js").style.display='none'
+            var i = 0;
+            var txt = silgi
+            var speed = 50;
+
+            function typeWriter() {
+                if (i < txt.length) {
+                 document.getElementById("yazi").innerHTML += txt.charAt(i);
+                    i++;
+                 setTimeout(typeWriter, speed);
+                }
+            }
           
       </script>
     </body>
