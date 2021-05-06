@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>İsmail Uygar'ın Sitesi</title>
+        <title id="titil">404 sayfası</title>
         <link rel="stylesheet" href="https://ismailuygar.tk/style.css"></link>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap"></link>
         <link rel="icon" type="image/png" href="https://ismailuygar.tk/favicon.ico"/>
@@ -8,10 +8,12 @@
     </head>
 
     <body>
-      <p id="404"></p>
+      <p id="404">javascript'i aç.</p>
       <script>
           var silgi = window.location.pathname.replace("/", "")
           document.getElementById("404").innerHTML=silgi
+          document.getElementById("titil").innerHTML=silgi
+          
       </script>
     </body>
 </html>
