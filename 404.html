@@ -7,13 +7,18 @@
         <meta name="description" content="sadece bir 404 sayfası.">
     </head>
 
-    <body>
+    <body id="b">
       <p id="js">javascript'i aç.</p>
         <p id="yazi"></p>
       <script>
           var silgi = window.location.pathname.replace("/", "")
           document.getElementById("titil").innerHTML=silgi
           document.getElementById("js").style.display='none'
+
+          if(silgi.length > 20) {
+            document.getElementById("yazi").innerHTML="d-dotum o kadar çok harf yazdın ki..."
+          } else {
+            document.getElementById("b").style.background="black"
             var i = 0;
             var txt = silgi
             var speed = 50;
@@ -27,6 +32,7 @@
             }
 
             typeWriter()
+          }
 
             /*
             kaynak: w3schools
@@ -34,5 +40,12 @@
             */
           
       </script>
+
+      <style>
+        body {
+          background: url("https://ismailuygar.tk/rick.gif") no-repeat fixed;
+          background-size: 100%;
+        }
+      </style>
     </body>
 </html>
