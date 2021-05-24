@@ -7,9 +7,13 @@
         <center>
             <img src="https://ismailuygar.tk/huzunlenmek.png"></img><br />
         <p>huzunlenmek</p>
-        <p>çünkü aradığın sayfa bulunmamak</p>
+        <p>çünkü <b id=""boldi></b> sunucumuzda bulunmamak</p>
         </center>
-
+    
+    <script>
+        var silgi = location.pathname.replace("/", "")
+        document.getElementById("boldi").innerHTML = silgi
+    </script>
       <style>
           html, 
           body {
