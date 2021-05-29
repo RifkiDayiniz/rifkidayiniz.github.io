@@ -36,3 +36,15 @@ function egl() {
     projeler.contentEditable = true
     sosyal.contentEditable = true
 }
+
+function theme() {
+  if(document.getElementById("body").classList.value === "blackTheme") {
+    document.getElementById("theme").innerHTML = "dark mode"
+    document.getElementById("body").classList.remove("blackTheme")
+    document.getElementById("theme").classList.add("white")
+  } else {
+    document.getElementById("body").classList.add("blackTheme")
+    document.getElementById("theme").classList.remove("white")
+    document.getElementById("theme").innerHTML = "light mode"
+  }
+}
