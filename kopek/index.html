@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>kedy</title>
+  <link rel="stylesheet" href="../style.css">
+  </link>
+</head>
+
+<body id="body">
+    <img id="image"></img>
+  <script>
+    var getJSON = function(url, callback) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.responseType = 'json';
+      xhr.onload = function() {
+        var status = xhr.status;
+        if (status == 200) {
+          callback(null, xhr.response);
+        } else {
+          callback(status);
+        }
+      };
+      xhr.send();
+    };
+    getJSON('https://dog.ceo/api/breeds/image/random', function(err, data) {
+      if (err != null) {
+        console.error(err);
+      } else {
+          document.getElementById("image").src = data.message;
+      }
+    });
+  </script>
+</body>
+</html>
